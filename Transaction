@@ -1,16 +1,25 @@
 import java.util.Date;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+
 
 public class Transaction {		
 	private Date date;
 	private char type;
 	private double amount,balance;
 	private String description;
+	
+	public Transaction(){
 		
+	}
+	
 	public Transaction(char type, double amount, double balance,String description){
 			this.type = type;
 			this.amount = amount;
 			this.balance = balance;
 			this.description = description;
+			this.date = new Date();
 	}
 	
 	public void setType(char type){
@@ -37,11 +46,16 @@ public class Transaction {
 	public String getDescription(){
 		return description;
 	}
+	public Date getDate(){
+		return date;
+	}
+	
+	
+	
 	
 	
 	
 		
 }
-
 
 
