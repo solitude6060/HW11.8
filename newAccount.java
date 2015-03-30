@@ -9,8 +9,17 @@ public class newAccount {
 	private double balance = 0;//in 8.7
 	private double annualInterestRate = 0;//in 8.7
 	private Date dateCreated;//in 8.7
-	ArrayList transactions;//arraylist
 	
+	
+	ArrayList<Transaction> act = new ArrayList<Transaction>();//arraylist
+	Transaction trans = new Transaction();
+	
+	public newAccount(){
+		id = 0;
+		balance = 0;
+		annualInterestRate = 0;
+		dateCreated = new Date();
+	}
 	
     public newAccount(String name,int id, double balance){
 		this.name = name;
@@ -18,7 +27,15 @@ public class newAccount {
 		this.balance = balance;
 	}
     
+    
+    
     //setter and getter
+    public void setName(String name){
+		this.name = name;
+	}
+    public String getName(){
+		return name;
+	}
     public void setid(int id){
 		this.id = id;
 	}
@@ -59,13 +76,14 @@ public class newAccount {
     //method
     public void withdraw(double money){
 		balance = balance - money;
+		act.add(new Transaction('W',money,balance,"withdraw money"));
 	} 
 			
 	public void deposit(double money){
 		balance =  balance + money;
+		act.add(new Transaction('D',money,balance,"deposit money"));
 	}
     
 	
 	
 }
-
