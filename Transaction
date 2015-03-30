@@ -1,0 +1,20 @@
+import java.util.Date;
+import java.util.Date;
+
+public class Transaction {		
+	private Date date;
+	private char type;
+	private double amount,balance;
+	private String description;
+		
+	public Transaction( ){
+			
+		
+		
+	}
+	
+	
+		
+}
+
+
