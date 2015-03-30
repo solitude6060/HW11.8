@@ -57,6 +57,7 @@ public class TestAccount {
 			System.out.printf("Transaction Type : %c\n",nacc.act.get(0).getType());
 			System.out.printf("Transaction Time : \n"+nacc.act.get(0).getDate());
 			System.out.printf("Transaction description : %s\n",nacc.act.get(0).getDescription());
+					
 						
 		}
 		
