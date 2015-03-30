@@ -10,10 +10,12 @@ public class Transaction {
 	private double amount,balance;
 	private String description;
 	
+	//default constructor
 	public Transaction(){
 		
 	}
 	
+	//constructor
 	public Transaction(char type, double amount, double balance,String description){
 			this.type = type;
 			this.amount = amount;
@@ -22,6 +24,7 @@ public class Transaction {
 			this.date = new Date();
 	}
 	
+	//setter & getter
 	public void setType(char type){
 		this.type = type;
 	}
