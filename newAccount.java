@@ -76,11 +76,13 @@ public class newAccount {
     //method
     public void withdraw(double money){
 		balance = balance - money;
+		//new variable to Transaction in the array list
 		act.add(new Transaction('W',money,balance,"withdraw money"));
 	} 
 			
 	public void deposit(double money){
 		balance =  balance + money;
+		//new variable to Transaction in the array list
 		act.add(new Transaction('D',money,balance,"deposit money"));
 	}
     
